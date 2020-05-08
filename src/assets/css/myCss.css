@@ -1,0 +1,56 @@
+@import '../../../node_modules/ngx-toastr/toastr.css';
+
+ @font-face {
+	font-family: 'yekan';
+	src: url(../font/Yekan/Yekan.eot);
+	src: url(../font/Yekan/Yekan.eot?#iefix) format("embedded-opentype"), url(../font/Yekan/Yekan.woff) format("woff"), url(../font/Yekan/Yekan.ttf) format("truetype"), url(../font/Yekan/Yekan.svg#BYekan) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.box-little{
+width: 15px;
+height: 7px;
+border: 1px solid #ed3f4b;
+background-color: #ed3f4b;
+float: left;
+margin: 3px;
+margin-top: 10px;
+}
+
+.card-header{
+    padding: 0.2em;
+}
+.card-body{
+    font-size: 15px;
+    padding: 10px;
+}
+#userImg{
+  width: 80px;
+}
+#headerLogin{
+  background-color: #84adf9 ;
+}
+
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  position: absolute;
+  padding-top: 10px;
+  padding-right: 380px;
+  min-width: 40px;
+
+  color: #acacac;
+}
+.color-text-white{
+  color: #e4e4e4;
+}
+
+::-webkit-input-placeholder { text-align:right; }
+/* mozilla solution */
+input:-moz-placeholder { text-align:right; }
+
