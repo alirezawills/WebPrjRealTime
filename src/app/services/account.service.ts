@@ -3,6 +3,7 @@ import {  HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 const JWThelper = new JwtHelperService();
 @Injectable({
   providedIn: 'root'
@@ -43,7 +44,15 @@ logOut(){
   localStorage.removeItem('token');
 
 }
+changePass(model: any)
+{
+  return this.http.post(environment.apiUrl + '/api/profile/ChangePassword', model).pipe(
+    map((resp: any) => {
 
+      return resp;
+    })
+  );
+}
 }
 
 

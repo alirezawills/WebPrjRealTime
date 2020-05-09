@@ -14,8 +14,13 @@ import { AlertService } from './services/alert.service';
 import { AuthGuard } from './guard/auth.guard';
 import { SharedService } from './services/shared.service';
 import { LoginGuard } from './guard/login.guard';
+import { JwtModule } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
-
+export function tokenGet() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -24,6 +29,14 @@ import { LoginGuard } from './guard/login.guard';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGet,
+        whitelistedDomains: [environment.host]
+
+      },
+    }),
     AppRoutingModule,
     AccountModule,
     MainModule,

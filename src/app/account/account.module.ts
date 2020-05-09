@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component';
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -18,6 +19,7 @@ import { RegisterComponent } from './components/register/register.component';
     AccountComponent,
     LoginComponent,
     RegisterComponent,
+
   ],
   providers: [
 

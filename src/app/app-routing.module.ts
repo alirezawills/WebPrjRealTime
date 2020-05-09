@@ -7,6 +7,7 @@ import { BodyComponent } from './main/components/body/body.component';
 import { RegisterComponent } from './account/components/register/register.component';
 import { AuthGuard } from './guard/auth.guard';
 import { LoginGuard } from './guard/login.guard';
+import { ChangePassComponent } from './main/components/changePass/changePass.component';
 
 
 
@@ -31,6 +32,9 @@ canActivate: [AuthGuard],
 children: [
   {
     path: '', component: BodyComponent
+  },
+  {
+    path: 'profile', component: ChangePassComponent
   }
   ]
  },
